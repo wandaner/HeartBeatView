@@ -1,11 +1,11 @@
-# -
-按钮，像心跳一样一闪一闪的
+# HeartBeatView
+##按钮，像心跳一样一闪一闪的
 
-#第一次做gitHub，之前都是在看别人的。有点小紧张，大家多指正批评。
+    第一次做gitHub，之前都是在看别人的。有点小紧张，大家多指正批评。这是一个自定义view，继承View，然后通过canvas绘制image。
 
-这是一个自定义view，继承View，然后通过canvas绘制image。时间间隔10ms，每次绘制计算当前心跳图片的大小。
+    时间间隔10ms，每次绘制计算当前心跳图片的大小。
 
-@Override
+    @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if(isFirstTime){
@@ -27,7 +27,7 @@
         }else if  (pastTime <= UpTime1 + DownTime1 + UpTime2 + DownTime2+gapTime){
             changeableImageSize = imageSize;
         }
-        //为了不让动画突兀结束，所以整个心跳结束之前，要使一个动画周期播放结束
+        //为了不让动画突兀结束，所以结束之前，要使一个动画周期播放结束
         if (toStop&(pastTime-(UpTime1+DownTime1+UpTime2+DownTime2))>stopTag) {
             Log.e("Log","------>pastTime and stop: "+(pastTime-(UpTime1+DownTime1+UpTime2+DownTime2)));
             mHandler.sendEmptyMessage(STOP);
