@@ -66,3 +66,4 @@
         }
     };
     通过handler不停的给自己发信息，绘制每一帧的图片，形成动画，demo里面没有recycle handler（我的错），大家看的时候注意一下
+    ![](https://github.com/wandaner/HeartBeatView/blob/branch/device-2017-05-10-172458.mp4_1494409022.gif)
