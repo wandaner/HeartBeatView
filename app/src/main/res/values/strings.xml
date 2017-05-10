@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AnimationApplication</string>
+    <string name="view_name">守护状态</string>
+</resources>
